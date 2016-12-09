@@ -1,8 +1,8 @@
 function LoginRoutes($stateProvider, $urlRouterProvider){
 	$stateProvider
-		.state('landing', {
+		.state('main.landing', {
 			url: "/landing",
-			templateUrl: 'js/landing/landing.html',
+			templateUrl: 'js/layout/landing/landing.html',
 			controller: 'landingCtrl',
 			controllerAs: 'vm'
 		})
