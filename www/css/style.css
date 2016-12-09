@@ -1,1 +1,21 @@
 /* Empty. Add your own CSS if you like */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+body{font-family: 'Roboto', sans-serif;}
+[nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar{background-color:#00BCD5;}
+.tab-container{width:100%; background-color:#278996; border-top:2px solid #fff; float:left;}
+.tab-content{ display:block; float:left; text-decoration:none; color:#fff; width:100%; text-align:center; border-right:1px solid #E1E1E1; font-family: 'Roboto', sans-serif; font-weight:300;}
+.tab{width:50%; height:40px; padding:10px 0; float:left;}
+.active{background-image:url(../img/tab_focus_icon.png); background-size:15px; background-repeat:no-repeat; background-position:center bottom;}
+.tab-content img{ float:left; display:block; margin-left:40px; margin-right:-40px; height:20px;}
+.content-area{background-color:#E2E2E2; width:100%; min-height:600px; padding:10px;}
+.feedbox-out{background-color:#fff; width:100%; height:80px; float:left; margin-top:10px; padding:5px;}
+.feedbox{border:none; width:100%; height:40px; resize:none; border-bottom:thin solid #EBEBEB;}
+.post-btn{border:none; background-color:#54B2FC; border-radius:5px; float:right; margin-top:8px; width:100px; color:#fff; font-family: 'Roboto', sans-serif; font-weight:300;}
+.post-cover{float:left; width:100%; min-height:100px; border-bottom:1px solid rgba(161,161,161,1.00); margin-top:10px;}
+.person-name{width:100%; float:left; color:#fff; background-color:#69C9EC; padding:5px 0 5px 30px; background-image:url(../img/user_icon_small.png); background-repeat:no-repeat; background-position:left +10px center; background-size:15px;}
+.feedpost{width:100%; float:left; color:#000; background-color:#F7F7F7; padding:5px 10px; font-family: 'Roboto', sans-serif; font-weight:300;}
+.feedpost img{width:100%; float:left; display:block;}
+.like-sec{width:100%; float:left; background-color:#69C9EC;}
+.like{width:50%; float:left; display:block; height:30px; background-image:url(../img/like_icon.png); background-repeat:no-repeat; background-position:center center; background-size:20px;}
+
+.post-head{width:50%; float:left; display:block; height:30px; background-color:#F5F5F5; color:#333; font-family: 'Roboto', sans-serif; font-size:20px; font-weight:300; text-align:center; padding-top:5px;}
