@@ -2,30 +2,30 @@
   <ion-content>
    
    <div class="tab-container">
-   	<div class=" tab">
-   		<a href="#" class="tab-content">
+   	<div class=" tab" ng-class="vm.getLikeClass('around')">
+   		<a href="#" class="tab-content" ng-click="vm.showPost()">
     		<img src="../../../img/posts_icon.png" alt="" />Around Us
     	</a>
     </div>
-    <div class="tab active">
-    	<a href="#" class="tab-content">
+    <div class="tab" ng-class="vm.getLikeClass('pool')">
+    	<a href="#" class="tab-content" ng-click="vm.showPool()">
     		<img src="../../../img/navigation_icon.png" alt="" />Carpool
     	</a>
     </div>
    </div>
    <!-- first Screen-->
-   <!--<div class="content-area">
+   <div class="content-area" ng-if="vm.showPostTab">
    	<div class="feedbox-out">
-    	<textarea placeholder="Whats new around..?" class="feedbox"></textarea>
-        <button class="post-btn">Post</button>
+    	<textarea placeholder="Whats new around..?" class="feedbox" ng-model="vm.feed"></textarea>
+        <button class="post-btn" ng-click="vm.postFeed()">Post</button>
     </div>
      
-   	<div class="post-cover">
+   	<div class="post-cover" ng-repeat="post in vm.posts">
    		<div class="person-name">
-    		Santosh Kumar
+    		{{post.name}}
     	</div>
     	<div class="feedpost">
-        	There is heavy traffic in Silk-Board, try to avoid this route.
+        	{{post.info}}
     	</div>
     	<div class="like-sec">
     		<a href="#" class="like">
@@ -37,75 +37,8 @@
         	</a>
     	</div>
    	</div>
-    <div class="post-cover">
-   		<div class="person-name">
-    		Santosh Kumar
-    	</div>
-    	<div class="feedpost">
-        	<img src="../../../img/87357.jpg" />
-    	</div>
-    	<div class="like-sec">
-    		<a href="#" class="like">
-        	</a>
-        	<div class="post-head">
-            	Traffic
-        	</div>
-            <a href="#" class="share">
-        	</a>
-    	</div>
-   	</div>
-    <div class="post-cover">
-   		<div class="person-name">
-    		Santosh Kumar
-    	</div>
-    	<div class="feedpost">
-        	There is heavy traffic in Silk-Board, try to avoid this route.
-    	</div>
-    	<div class="like-sec">
-    		<a href="#" class="like">
-        	</a>
-        	<div class="post-head">
-            	Traffic
-        	</div>
-            <a href="#" class="share">
-        	</a>
-    	</div>
-   	</div>
-    <div class="post-cover">
-   		<div class="person-name">
-    		Santosh Kumar
-    	</div>
-    	<div class="feedpost">
-        	There is heavy traffic in Silk-Board, try to avoid this route.
-    	</div>
-    	<div class="like-sec">
-    		<a href="#" class="like">
-        	</a>
-        	<div class="post-head">
-            	Traffic
-        	</div>
-            <a href="#" class="share">
-        	</a>
-    	</div>
-   	</div>
-   </div>-->
-   
-   <!-- Third Screen-->
-   <!--<div class="content-area form">
-   	<label class="form-lbl">Name</label>
-    <input type="text" class="form-txtbox">
-    <label class="form-lbl">Employee id</label>
-    <input type="text" class="form-txtbox">
-    <label class="form-lbl">Starting point</label>
-    <input type="text" class="form-txtbox">
-    <label class="form-lbl">Destination</label>
-    <input type="text" class="form-txtbox">
-    <label class="form-lbl">Number of seats</label>
-    <input type="text" class="form-txtbox">
-    <label class="form-lbl">Contact number</label>
-    <input type="text" class="form-txtbox">
-    <button type="submit" class="form-sbmt">Submit</button>
-   </div>-->
+    
+   </div>
    
    <!-- Login Screen-->
    <!--<div class="content-area login">
@@ -117,8 +50,8 @@
    </div>-->
    
    <!-- Second Screen-->
-   <div class="content-area form">
-   	<a href="#" class="addpool"></a>
+   <div class="content-area form" ng-if="vm.showPoolTab">
+   	<a href="" class="addpool" ng-click="vm.addPool()"></a>
    	<div class="card-container">
     	<div class="card-head">
         	<table>
