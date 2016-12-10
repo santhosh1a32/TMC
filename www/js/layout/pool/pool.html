@@ -1,16 +1,16 @@
 <!-- Third Screen-->
 <div class="content-area form" style="margin-top: 10%">
    	<label class="form-lbl">Name</label>
-    <input type="text" class="form-txtbox">
+    <input type="text" ng-model = "vm.poolInfo.name" class="form-txtbox">
     <label class="form-lbl">Employee id</label>
-    <input type="text" class="form-txtbox">
+    <input type="text" ng-model = "vm.poolInfo.empId" class="form-txtbox">
     <label class="form-lbl">Starting point</label>
-    <input type="text" class="form-txtbox">
+    <input type="text" ng-model = "vm.poolInfo.startingPoint" class="form-txtbox">
     <label class="form-lbl">Destination</label>
-    <input type="text" class="form-txtbox">
+    <input type="text" ng-model = "vm.poolInfo.destination" class="form-txtbox">
     <label class="form-lbl">Number of seats</label>
-    <input type="text" class="form-txtbox">
+    <input type="text" ng-model = "vm.poolInfo.numberOfSeats" class="form-txtbox">
     <label class="form-lbl">Contact number</label>
-    <input type="text" class="form-txtbox">
-    <button type="submit" class="form-sbmt">Submit</button>
+    <input type="text" ng-model = "vm.poolInfo.contactNumber" class="form-txtbox">
+    <button type="submit" class="form-sbmt" ng-click = "vm.submitPoolInfo()">Submit</button>
 </div>
